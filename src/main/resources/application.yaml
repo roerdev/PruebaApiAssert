@@ -1,0 +1,22 @@
+server:
+  servlet:
+    context-path: /api-assert
+  port : 8080
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:pruebadb;DB_CLOSE_ON_EXIT=FALSE
+    username: root
+    password: root
+    driver-class-name: org.h2.Driver
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+        ddl-auto: none
+    show-sql: true
+swagger:
+  enabled: true
